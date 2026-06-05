@@ -20,7 +20,7 @@ if (!empty($id) && !empty($aktivitas)) {
     // Jalankan Edit Teks Jadwal
     $sql = "UPDATE jadwal SET hari='$hari', waktu='$waktu', aktivitas='$aktivitas', keterangan='$keterangan' WHERE id='$id'";
 } else if (!empty($id)) {
-    // 🎯 FIX: Nama kolom diganti menjadi is_done sesuai database aslimu
+    
     $sql = "UPDATE jadwal SET is_done=1 WHERE id='$id'";
 } else {
     echo json_encode(array("status" => "error", "message" => "Data tidak lengkap"));
